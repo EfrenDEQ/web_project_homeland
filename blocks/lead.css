@@ -24,8 +24,12 @@
   line-height: 36px;
 }
 
-.lead__image {
+.lead-image {
   margin: 64px 11.5625% 0;
-  width: 76.875%;
+  max-width: 76.875%;
+}
+
+.lead-image__photo {
   height: 62.5%;
+  box-shadow: 10px 10px 25px 0px #00000080;
 }
