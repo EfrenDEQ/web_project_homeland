@@ -6,30 +6,47 @@
 .places-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto-fit, minmax(0, 1fr));
   margin: 80px 0 0 0;
+  max-width: 99.69%;
+  max-height: 100%;
 }
 
 .places-card__title {
   font-weight: 900;
   font-size: 72px;
   line-height: 76px;
-  margin: 0;
+  margin: 0 0 48px 0;
 }
 
 .places-card__image {
   max-width: 460px;
   height: 460px;
-  margin: 48px 0 48px 0;
+  margin: 0 0 48px 0;
+  box-shadow: 10px 10px 25px 0px #00000080;
+}
+
+.places-card__image:hover {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .places-card__button {
   background: linear-gradient(90deg, #0278fe 0%, #003a7b 99.98%);
   box-shadow: 5px 5px 10px 0px #00000040;
-  max-width: 289px;
+  width: 289px;
   height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.places-card__button:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 120, 254, 0.25) 0%,
+    rgba(0, 58, 123, 0.25) 99.98%
+  );
+  box-shadow: 5px 5px 10px 0px #00000040;
 }
 
 .places-card__button-text {
@@ -38,11 +55,10 @@
 }
 
 .places-card__artist {
-  margin: 107px 0 48px 0;
-}
-
-.places-card__artist-title_margin_special {
-  margin: 85px 0 48px 0;
+  margin: 0 0 48px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .places-card__artist-title {
@@ -50,6 +66,7 @@
   font-size: 12px;
   text-transform: uppercase;
   color: #aaaaaa;
+  margin: 0 0 8px 0;
 }
 
 .places-card__artist-name {
@@ -62,8 +79,17 @@
 }
 
 .places-card__text {
+  grid-row: 2 / span 2;
+  grid-column: 2;
+}
+
+.places-card__text-paragraph {
   font-weight: 400;
   font-size: 18px;
   line-height: 163%;
   margin: 25px 0 0 0;
+}
+
+.places-card__text-paragraph:nth-child(1) {
+  margin: 0 0 0 0;
 }
